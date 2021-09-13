@@ -1,9 +1,17 @@
-var startButton = document.getElementById ("start-btn");
-var startScreen = document.getElementById ("start-screen");
-var questionContainer = document.getElementById ("questions");
-var questionTitle = document.getElementById ("question-title");
+var timeDisplay = document.getElementById("timeDisplay")
+var timer = document.getElementById ("timer")
+var startButton = document.getElementById ("start-btn")
+var startScreen = document.getElementById ("start-screen")
+var questions = document.getElementById ("questions")
+var questionTitle = document.getElementById ("question-title")
 var questionContainer = document.getElementById ("questions-container")
-var choices = document.getElementById ("choices");
+var questionDiv = document.getElementById ("question-title")
+var choices = document.getElementById ("choices")
+var answerBtn1 = document.getElementById ('answer1')
+var answerBtn2 = document.getElementById ('answer2')
+var answerBtn3 = document.getElementById ('answer3')
+var answerBtn4 = document.getElementById ('answer4')
+var feedback = document.getElementById ('feedBack') 
 var qNum = 0
 var timeLeft = 0
 var quizTime = 0
@@ -44,21 +52,22 @@ function quiz() {
     quizOver();
 }
 else {
-    questionDiv.innerHTML = (questionsArray[qNum].title)
-    answerBtn1.innerHTML = (questionsArray[qNum].choices[0])
-    answerBtn2.innerHTML = (questionsArray[qNum].choices[1])
-    answerBtn3.innerHTML = (questionsArray[qNum].choices[2])
-    answerBtn4.innerHTML = (questionsArray[qNum].choices[3])
+    questionTitle.innerHTML = (questionsArray[qNum].title)
+    answerBtn1.innerHTML = (questionsArray[qNum].choices[1])
+    answerBtn2.innerHTML = (questionsArray[qNum].choices[2])
+    answerBtn3.innerHTML = (questionsArray[qNum].choices[3])
+    answerBtn4.innerHTML = (questionsArray[qNum].choices[4])
 }}
 
 //  function checks whether or not answer is the correct one
 function answerCheck(btnId) {
+    console.log(btnId)
     if ((document.getElementById(btnId).innerHTML) === (questionsArray[qNum].answer)) {
         rightAnswer();
         qNum++
     }
     else {
-        wrongAnswer();
+       wrongAnswer();
         qNum++
     }
     quiz(qNum);
@@ -80,16 +89,15 @@ startButton.addEventListener('click', startQuiz);
 
 function startQuiz() {
     console.log('startQuiz');
-    questions.classList.add('hide')
-    questionContainer.classList.remove('hide');
-
+    questions.classList.remove('hide');
+    startScreen.setAttribute("style", "display:none;");
+   
 }
 
-function showQuestions() {
-   questionContainer.innerText = questions.questions
-   button.addEventListener('click', selecAnswer)
-   questionsArray.appendChild(questionContainer)
-}
+
+
+
+
 
 
 
