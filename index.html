@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/style.css">
+  <title>Code Quiz</title>
+</head>
+
+<body>
+<div class="highscore-page">
+    <div class="row">
+        <a class = "highscore col-2" href="./highscore.html">
+        <h3>View Highscores</h3>
+        </a>
+        <div class="col-9"></div>
+        <h3 id="timeDisplay" class="col-1">Time: <span id="timer">0</span></h3>
+    </div>
+</div>
+
+
+<div id="start-screen" class="hide">
+    <div id="title">
+    <div id="results">
+    <h1> Code Quiz challenge</h1>
+    <p>Try answer the folling code-related questions whitin the time limit. Keep in mind 
+        the incorrect answers will <br> penalize your scoretime by ten seconds</p>
+    <button id="start-btn">Start Quiz</button>
+
+    </div>  
+  </div>
+</div>
+
+
+<div id="questions" class="hide">
+    <div id="question-title">
+    <div id="questions-container" class=>
+        <button type="button" onclick="answerCheck(this.id)" id="answer1" class="quiz-btn"></button>
+        <button type="button" onclick="answerCheck(this.id)" id="answer2" class="quiz-btn"></button>
+        <button type="button" onclick="answerCheck(this.id)" id="answer3" class="quiz-btn"></button>
+        <button type="button" onclick="answerCheck(this.id)" id="answer4" class="quiz-btn"></button>
+        </div>  
+    </div>
+</div>
+
+  <script src= "./questions.js"></script>
+  <script src= "./logic.js"></script>
+</body>
+</html>
