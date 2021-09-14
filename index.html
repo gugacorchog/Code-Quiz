@@ -18,32 +18,32 @@
         <h3 id="timeDisplay" class="col-1">Time: <span id="timer">0</span></h3>
     </div>
 </div>
+<div class="content center" id="theContent">
 
-
-<div id="start-screen">
-    <div id="title">
-    <div id="results">
-    <h1> Code Quiz challenge</h1>
-    <p>Try answer the folling code-related questions whitin the time limit. Keep in mind 
-        the incorrect answers will <br> penalize your scoretime by ten seconds</p>
-    <button id="start-btn">Start Quiz</button>
-
+  <div id="start-screen">
+      <div id="title">
+       <div id="results">
+          <h1> Code Quiz challenge</h1>
+          <p>Try answer the folling code-related questions whitin the time limit. Keep in mind 
+            the incorrect answers will <br> penalize your scoretime by ten seconds</p>
+          <button id="start-btn">Start Quiz</button>
+       </div>      
     </div>  
   </div>
 </div>
 
 
 <div id="questions" class="hide">
-    <div id="question-title">
-    <div id="questions-container" class="quiz">
-        <button type="button" onclick="answerCheck(this.id)" id="answer1" class="quiz-btn"></button>
-        <button type="button" onclick="answerCheck(this.id)" id="answer2" class="quiz-btn"></button>
-        <button type="button" onclick="answerCheck(this.id)" id="answer3" class="quiz-btn"></button>
-        <button type="button" onclick="answerCheck(this.id)" id="answer4" class="quiz-btn"></button>
-        </div>  
-    </div>
+    <div id="question-title"></div>
+        <div id="questions-container" class="quiz">
+         <button type="button" onclick="answerCheck(this.id)" id="answer1" class="quiz-btn"></button>
+         <button type="button" onclick="answerCheck(this.id)" id="answer2" class="quiz-btn"></button>
+         <button type="button" onclick="answerCheck(this.id)" id="answer3" class="quiz-btn"></button>
+         <button type="button" onclick="answerCheck(this.id)" id="answer4" class="quiz-btn"></button>
+    </div>  
+    <div id="feedBack"></div>
 </div>
-<div id="feedBack"></div>
+
 
   <script src= "./questions.js"></script>
   <script src= "./logic.js"></script>
