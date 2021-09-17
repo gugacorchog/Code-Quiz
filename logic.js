@@ -16,7 +16,7 @@ var qNum = 0
 var timeLeft = 0
 var quizTime = 0
 var score = 0
-
+var highscores =[]
 
 // this function is to check if current page is highscore page
 if (title.innerHTML === "Highscores") {
@@ -96,6 +96,8 @@ function quizOver(){
     var done = document.getElementById('done')
     var submit = document.getElementById('submit')
 
+    questionTitle.style.display= 'none'
+
     timer.innerHTML = (0)
 // Added text and button to submit afert finish game 
     content.insertAdjacentHTML('afterbegin', '<h1 id="done">All Done!</h1> <button id="submit" class="btn btn-danger">Submit</button> <input id="userScore"> - Enter Initials</input>');
@@ -106,7 +108,18 @@ function quizOver(){
     var submit = document.getElementById('submit')
     submit.addEventListener("click", function(){
     var value = document.getElementById('userScore').value;
-    localStorage.setItem(value, score)
+    var newscore = {
+        name: value,
+        score: score,
+    }    
+
+    var localstore = JSON.parse(localStorage.getItem('scores')) || []
+    
+    localstore.push(newscore) 
+    localStorage.setItem('scores', JSON.stringify(localstore))
+
+
+
     window.location.href = "highscore.html"    
 
     });
@@ -129,6 +142,13 @@ function startQuiz() {
 }
 
 
+
+
+
+
+
+
+ 
 
 
 
