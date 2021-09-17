@@ -103,11 +103,11 @@ p {
     border-radius: 4px;
 }
 
-#tableBody {
+td {
     font-size: 30px;
-    padding: 20%;
+    width: 89%;
+    height: 60%;
 }
 
-.tr {
-   
-}
+
+
