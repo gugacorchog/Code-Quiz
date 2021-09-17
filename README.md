@@ -20,8 +20,6 @@ HTML PAGE : https://gugacorchog.github.io/Code-Quiz/index.html
 
 Screeshot:
 
-![A test image](Code_quiz_01.jpg)
-
-![A test image](Code_quiz_02.jpg)
-
-![A test image](Code_quiz_03.jpg)
+![Code_quiz_01](https://user-images.githubusercontent.com/87793995/133776431-27cace30-c45d-4da2-ad21-91821d1c5f93.jpg)
+![Code_quiz_02](https://user-images.githubusercontent.com/87793995/133776441-3a2d16d1-f0a9-4cfd-b5dd-f73649383b06.jpg)
+![Code_quiz_03](https://user-images.githubusercontent.com/87793995/133776451-2bce1072-f306-4310-a5f9-b66c063fcbfb.jpg)
